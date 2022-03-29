@@ -1,0 +1,18 @@
+package game;
+
+import java.util.ArrayList;
+
+public class ListaPersonajes {
+
+	private ArrayList<Personaje> lista_personajes;
+	
+	public void añadir(Personaje personaje) {
+		lista_personajes.add(personaje);
+	}
+	
+	public void ver_datos() {
+		for (int i=0;i<lista_personajes.size();i++)	{
+			System.out.println(lista_personajes.get(i));
+		}
+	}
+}

@@ -1,0 +1,12 @@
+package game;
+
+import java.util.ArrayList;
+
+public class ListaPersonajes {
+
+	private ArrayList<Personaje> lista_personajes;
+	
+	public void añadir(Personaje personaje) {
+		lista_personajes.add(personaje)
+	}
+}

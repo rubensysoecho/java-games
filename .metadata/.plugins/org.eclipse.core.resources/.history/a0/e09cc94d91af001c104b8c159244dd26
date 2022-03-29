@@ -1,0 +1,6 @@
+package game;
+
+public class ListaMapas {
+
+	ArrayList<Mapa> lista_mapas=new ArrayList<Mapa>();
+}

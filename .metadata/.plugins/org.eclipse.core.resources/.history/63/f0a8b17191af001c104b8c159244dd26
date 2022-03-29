@@ -1,0 +1,8 @@
+package game;
+
+import java.util.ArrayList;
+
+public class ListaMapas {
+
+	ArrayList<Mapa> lista_mapas=new ArrayList<Mapa>();
+}

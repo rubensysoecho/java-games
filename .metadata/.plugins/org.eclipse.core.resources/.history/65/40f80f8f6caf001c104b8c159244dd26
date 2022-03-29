@@ -1,0 +1,9 @@
+package game;
+
+public class Player extends Jugador{
+
+	private String nombre;
+	private int edad;
+	private int vidas;
+	
+}
