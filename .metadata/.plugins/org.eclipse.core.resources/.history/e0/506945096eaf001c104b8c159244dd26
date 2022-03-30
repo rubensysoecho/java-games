@@ -1,9 +1,0 @@
-package game;
-
-public class Jugador extends JugadorGeneral{
-
-	private String nombre;
-	private int edad;
-	private int vidas;
-	
-}

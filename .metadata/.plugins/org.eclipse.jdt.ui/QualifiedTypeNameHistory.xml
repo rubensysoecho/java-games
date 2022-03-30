@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="game.Jugador"/>
-    <fullyQualifiedTypeName name="game.Personaje"/>
     <fullyQualifiedTypeName name="game.ListaPersonajes"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="game.Situacion"/>
+    <fullyQualifiedTypeName name="game.Personaje"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="game.Tutorial"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="game.tut_casa"/>
 </qualifiedTypeNameHistroy>
