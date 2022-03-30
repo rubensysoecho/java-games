@@ -7,7 +7,11 @@ public class programa {
 
 	public static final Scanner entrada=new Scanner(System.in);
 	public static final Random rand=new Random();
-
+	
+	public static void main(String[] args) {		
+		inicio();
+	}
+	
 	public static void inicio() {
 		System.out.println("|----INICIO JUEGO----|");
 		System.out.println("\n¡Bienvenido a mi juego de rol personal!\n");
@@ -79,9 +83,7 @@ public class programa {
 		}
 	}
 	
-	public static void main(String[] args) {		
-		inicio();
-	}
+	
 	
 		
 

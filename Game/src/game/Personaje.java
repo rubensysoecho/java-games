@@ -10,23 +10,6 @@ public class Personaje extends Jugador{
 		super();
 		this.nombre = nombre;
 		this.edad = edad;
-		switch(edad)	{
-		case 19: 
-			super.setFuerza(super.getFuerza()+2);
-			super.setDestreza(super.getDestreza()+3);
-			super.setVelocidad(super.getVelocidad()+2);;
-			break;
-		case 40:
-			super.setFuerza(super.getFuerza()-1);
-			super.setDestreza(super.getDestreza()+4);
-			super.setVelocidad(super.getVelocidad()-1);
-			break;
-		case 70:
-			super.setFuerza(super.getFuerza()-2);
-			super.setDestreza(super.getDestreza()-2);
-			super.setVelocidad(super.getVelocidad()-4);
-			break;
-		}
 	}
 	
 	public String getNombre() {
