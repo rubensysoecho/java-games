@@ -35,7 +35,7 @@ public class Personaje extends Jugador{
 	
 	@Override
 	public String toString() {
-		return "|---"+this.nombre.toUpperCase()+"---| \nEdad-> "+this.edad+"\nVidas-> "+this.vidas+"\nHP->"+super.getHp()+"\nFuerza->"+super.getFuerza()+"\nDestreza->"+super.getDestreza()+"\nVelocidad->"+super.getVelocidad();
+		return "|---"+this.nombre.toUpperCase()+"---| \nEdad-> "+this.edad+"\nVidas-> "+this.vidas+"\nHP->"+super.getHp();
 	}
 
 	
