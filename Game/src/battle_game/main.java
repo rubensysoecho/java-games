@@ -3,7 +3,20 @@ package battle_game;
 import java.util.Scanner;
 
 public class main {	
-	public static final Scanner entrada = new Scanner(System.in);
+	public static void main(String[] args) {
+		
+		intro();
+		duelista tu = new duelista("Percival");
+		duelista oponente = new duelista("Lancelot");
+		batalla batalla1 = new batalla(tu, oponente);
+		
+		tu.stats();
+		
+		
+	}
+
+	public final Scanner entrada = new Scanner(System.in);
+	
 	public static void intro()	{
 		System.out.println("<|><|><|><|><|><|><|><|>");
 		System.out.println("<|>--BLOOD AND GLORY-<|>");
@@ -14,18 +27,8 @@ public class main {
 		System.out.println();
 		System.out.println("Juez-> Los dos, a vuestros puestos, ¡QUE COMIENCE EL COMBATE!\n");			
 	}
-
-	public static void main(String[] args) {
-		intro();
-		duelista tu = new duelista("Percival");
-		duelista oponente = new duelista("Lancelot");
-		batalla batalla1 = new batalla(tu, oponente);
-		
-		tu.stats();
-		
-		
-	}
-	public static void smth() {
+	
+	public void smth() {
 		System.out.println("============");
 		System.out.println("|¡VICTORIA!|");
 		System.out.println("============");
