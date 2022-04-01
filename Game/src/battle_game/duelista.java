@@ -99,13 +99,7 @@ public class duelista {
 	}
 	
 	public boolean impacta_estocada(duelista duelista) {
-		int random = rand.nextInt(10);
-		if (random > duelista.armadura)	{
-			return true;
-		}
-		else	{
-			return false;
-		}
+		return rand.nextInt(10) > duelista.armadura;
 	}
 	
 	public void aciertos() {
