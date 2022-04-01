@@ -122,9 +122,9 @@ public class duelista {
 	public void daño_estocada(duelista duelista) {
 		if (impacta_estocada(duelista) == true) {
 			duelista.hp = fuerza + destreza + rand.nextInt(20);
-			aciertos.get(rand.nextInt(aciertos.size()));
+			System.out.println(aciertos.get(rand.nextInt(aciertos.size())));
 		} else {
-			fallos.get(rand.nextInt(fallos.size()));
+			System.out.println(fallos.get(rand.nextInt(fallos.size())));
 		}
 	}
 
