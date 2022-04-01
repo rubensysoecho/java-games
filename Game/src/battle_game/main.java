@@ -4,18 +4,21 @@ import java.util.Scanner;
 
 public class main {	
 	public static void main(String[] args) {
-		
 		intro();
 		duelista tu = new duelista("Percival");
 		duelista oponente = new duelista("Lancelot");
 		batalla batalla1 = new batalla(tu, oponente);
-		
-		tu.stats();
-		
-		
+
+		while (batalla1.isAcabado()==false) {
+			tu.hp();
+			tu.turno(entrada, oponente);
+			oponente.hp();
+			batalla1.setAcabado(true);
+		}
+			
 	}
 
-	public final Scanner entrada = new Scanner(System.in);
+	public final static Scanner entrada = new Scanner(System.in);
 	
 	public static void intro()	{
 		System.out.println("<|><|><|><|><|><|><|><|>");
@@ -25,7 +28,7 @@ public class main {
 		System.out.println("Oponente-> Asi que tu eres el famoso espadachin, ja, no pareces gran cosa");
 		System.out.println("Tu-> Bueno, ya sabes lo que dicen, nunca juzgues un libro por su portada, ¡En guardia canalla!");
 		System.out.println();
-		System.out.println("Juez-> Los dos, a vuestros puestos, ¡QUE COMIENCE EL COMBATE!\n");			
+		System.out.println("Juez-> Los dos, a vuestros puestos, ¡QUE COMIENCE EL COMBATE!");			
 	}
 	
 	public void smth() {
@@ -39,5 +42,4 @@ public class main {
 		System.out.println("Combate terminado. Tu cuerpo inerte será un festin para los cuervos.");
 	}
 	
-
 }

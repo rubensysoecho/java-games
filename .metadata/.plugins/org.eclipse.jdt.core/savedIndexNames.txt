@@ -1,4 +1,3 @@
 INDEX VERSION 1.131+C:\Users\Usuario\Documents\GitHub\java-text-game\.metadata\.plugins\org.eclipse.jdt.core
 2577175673.index
-1115243331.index
 4155975643.index

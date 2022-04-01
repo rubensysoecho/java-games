@@ -11,6 +11,7 @@ public class duelista {
 
 	private String nombre;
 	private int hp;
+	private int max_hp;
 	private int fuerza;
 	private int destreza;
 	private int armadura;
@@ -29,9 +30,18 @@ public class duelista {
 		super();
 		this.nombre = nombre;
 		this.hp = rand.nextInt(20) + 15;
+		this.max_hp = hp;
 		this.fuerza = rand.nextInt(20) + 3;
 		this.destreza = rand.nextInt(3);
 		this.armadura = rand.nextInt(15) + 4;
+	}
+
+	public int getMax_hp() {
+		return max_hp;
+	}
+
+	public void setMax_hp(int max_hp) {
+		this.max_hp = max_hp;
 	}
 
 	public String getNombre() {
@@ -75,14 +85,20 @@ public class duelista {
 	}
 
 	public void stats() {
-		System.out.println("|---" + this.nombre + "---|");
+		System.out.println("\n|---" + this.nombre + "---|");
 		System.out.println("HP-> " + this.hp);
 		System.out.println("Fuerza-> " + this.fuerza);
 		System.out.println("Destreza-> " + this.destreza);
 		System.out.println("Armadura-> " + this.armadura);
 	}
+	
+	public void hp()	{
+		System.out.println("\n"+this.nombre+"--> "+this.hp+"/"+this.max_hp+" HP");
+	}
+	
 
 	public void turno(Scanner e, duelista duelista) {
+		System.out.println("\n#######|"+this.nombre+"|########");
 		System.out.println("=========================");
 		System.out.println("| A - Estocada	        |");
 		System.out.println("| B - Corte             |");
@@ -106,9 +122,9 @@ public class duelista {
 	public void daño_estocada(duelista duelista) {
 		if (impacta_estocada(duelista) == true) {
 			duelista.hp = fuerza + destreza + rand.nextInt(20);
-			aciertos.get(rand.nextInt(3));
+			aciertos.get(rand.nextInt(aciertos.size()));
 		} else {
-			fallos.get(rand.nextInt(2));
+			fallos.get(rand.nextInt(fallos.size()));
 		}
 	}
 
