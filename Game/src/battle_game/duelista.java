@@ -15,6 +15,7 @@ public class duelista {
 	private int fuerza;
 	private int destreza;
 	private int armadura;
+	private boolean derrotado;
 	private static ArrayList<String> aciertos, fallos;
 
 	static {
@@ -58,6 +59,9 @@ public class duelista {
 
 	public void setHp(int hp) {
 		this.hp = hp;
+		if (hp<=0) {
+			this.derrotado = true;
+		}
 	}
 
 	public int getFuerza() {
@@ -82,6 +86,14 @@ public class duelista {
 
 	public void setArmadura(int armadura) {
 		this.armadura = armadura;
+	}
+
+	public boolean isDerrotado() {
+		return derrotado;
+	}
+
+	public void setVencedor(boolean derrotado) {
+		this.derrotado = derrotado;
 	}
 
 	public void stats() {
@@ -121,7 +133,7 @@ public class duelista {
 
 	public void daño_estocada(duelista duelista) {
 		if (impacta_estocada(duelista) == true) {
-			duelista.hp = fuerza + destreza + rand.nextInt(20);
+			duelista.setHp(duelista.getHp()-(fuerza + destreza + rand.nextInt(20)));
 			System.out.println(aciertos.get(rand.nextInt(aciertos.size())));
 		} else {
 			System.out.println(fallos.get(rand.nextInt(fallos.size())));
@@ -129,7 +141,7 @@ public class duelista {
 	}
 
 	public boolean impacta_estocada(duelista duelista) {
-		return rand.nextInt(10) > duelista.armadura;
+		return rand.nextInt(20)+15 > duelista.armadura;
 	}
 
 }

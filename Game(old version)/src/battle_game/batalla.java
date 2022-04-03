@@ -4,11 +4,7 @@ public class batalla {
 	
 	private duelista duelista1;
 	private duelista duelista2;
-	private static boolean acabado;
-	
-	static	{
-		acabado = false;
-	}
+	private boolean acabado;
 	
 	public batalla(duelista duelista1, duelista duelista2) {
 		super();
@@ -22,6 +18,7 @@ public class batalla {
 	public void setAcabado(boolean acabado) {
 		this.acabado = acabado;
 	}
+	
 	
 	
 	
