@@ -7,6 +7,12 @@ public class main {
 		intro();
 		duelista tu = new duelista("Percival");
 		duelista oponente = new duelista("Lancelot");
+		
+		while (preparacion(tu, oponente) == false) {
+			preparacion(tu, oponente);
+		}
+		
+		
 		batalla batalla1 = new batalla(tu, oponente);
 
 		while (batalla1.isAcabado() == false) {
@@ -44,5 +50,21 @@ public class main {
 		System.out.println("Tu-> Bueno, ya sabes lo que dicen, nunca juzgues un libro por su portada, ¡En guardia canalla!");
 		System.out.println();
 		System.out.println("Juez-> Los dos, a vuestros puestos, ¡QUE COMIENCE EL COMBATE!");			
-	}	
+	}
+	
+	public static boolean preparacion(duelista tu, duelista oponente)	{
+			tu.stats();
+			oponente.stats();
+			
+			System.out.println("Listo para combatir?");
+			System.out.println("S/N: ");
+			String respuesta = entrada.next().toLowerCase();
+			
+			if (respuesta.equals("s"))	{
+				return true;
+			}
+			else	{
+				return false;
+			}
+	}
 }
