@@ -12,27 +12,22 @@ public class main {
 			preparacion(tu, oponente);
 		}
 		
-		
 		batalla batalla1 = new batalla(tu, oponente);
 
 		while (batalla1.isAcabado() == false) {
+			tu.setDefendido(false);
+			oponente.setDefendido(false);
 			tu.hp();
 			tu.turno(entrada, oponente);
 			oponente.hp();
 			if (oponente.isDerrotado() == true)	{
-				System.out.println("============");
-				System.out.println("|¡VICTORIA!|");
-				System.out.println("============");
-				System.out.println("Combate terminado. Felicidades, has ganado el combate y obtenido la gloria.");
+				victoria();
 				batalla1.setAcabado(true);
 				break;
 			}
 			oponente.turno(entrada, tu);
 			if (tu.isDerrotado() == true) {
-				System.out.println("===========");
-				System.out.println("|¡DERROTA!|");
-				System.out.println("===========");
-				System.out.println("Combate terminado. Tu cuerpo inerte será un festin para los cuervos.");
+				derrota();
 				batalla1.setAcabado(true);
 				break;
 			}
@@ -66,5 +61,18 @@ public class main {
 			else	{
 				return false;
 			}
+	}
+
+	public static void victoria() {
+		System.out.println("============");
+		System.out.println("|¡VICTORIA!|");
+		System.out.println("============");
+		System.out.println("Combate terminado. Felicidades, has ganado el combate y obtenido la gloria.");
+	}
+	public static void derrota()	{
+		System.out.println("===========");
+		System.out.println("|¡DERROTA!|");
+		System.out.println("===========");
+		System.out.println("Combate terminado. Tu cuerpo inerte será un festin para los cuervos.");
 	}
 }
