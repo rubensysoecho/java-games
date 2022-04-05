@@ -55,6 +55,7 @@ public class duelista {
 	public void setHp(int hp) {
 		this.hp = hp;
 		if (hp <= 0) {
+			this.hp = 0;
 			setEsDerrotado(true);
 		}
 	}
@@ -116,6 +117,7 @@ public class duelista {
 		switch (accion) {
 		case "a":
 			daño_estocada(duelista);
+			return;
 		case "b":
 
 		case "c":
