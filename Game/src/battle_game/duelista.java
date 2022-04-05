@@ -55,7 +55,7 @@ public class duelista {
 	public void setHp(int hp) {
 		this.hp = hp;
 		if (hp <= 0) {
-			setEsDerrotado(esDerrotado);
+			setEsDerrotado(true);
 		}
 	}
 
