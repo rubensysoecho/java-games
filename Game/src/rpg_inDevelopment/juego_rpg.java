@@ -3,7 +3,7 @@ package rpg_inDevelopment;
 import java.util.Random;
 import java.util.Scanner;
 
-public class programa {
+public class juego_rpg {
 
 	public static final Scanner entrada=new Scanner(System.in);
 	public static final Random rand=new Random();

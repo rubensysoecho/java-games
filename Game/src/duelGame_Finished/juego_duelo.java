@@ -2,7 +2,7 @@ package duelGame_Finished;
 
 import java.util.Scanner;
 
-public class main {	
+public class juego_duelo {	
 	public static void main(String[] args) {
 		intro();
 		duelista tu = new duelista("Percival");
