@@ -1,4 +1,4 @@
-package battle_game;
+package duelGame_Finished;
 
 import java.util.Scanner;
 

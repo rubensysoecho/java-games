@@ -1,4 +1,4 @@
-package battle_game;
+package duelGame_Finished;
 
 public class batalla {
 	

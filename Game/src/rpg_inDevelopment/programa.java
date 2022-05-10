@@ -1,4 +1,4 @@
-package game;
+package rpg_inDevelopment;
 
 import java.util.Random;
 import java.util.Scanner;

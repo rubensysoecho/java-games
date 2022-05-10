@@ -1,4 +1,4 @@
-package game;
+package rpg_inDevelopment;
 
 public class Personaje extends Jugador{
 
