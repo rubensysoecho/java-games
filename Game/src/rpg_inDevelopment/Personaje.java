@@ -31,17 +31,8 @@ public class Personaje extends Jugador{
 		this.vidas = vidas;
 	}
 
-	
-	
 	@Override
 	public String toString() {
 		return "|---"+this.nombre.toUpperCase()+"---| \nEdad-> "+this.edad+"\nVidas-> "+this.vidas+"\nHP->"+super.getHp();
 	}
-
-	
-	
-	
-
-	
-	
 }

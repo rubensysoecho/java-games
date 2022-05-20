@@ -198,6 +198,6 @@ public class duelista {
 		this.setDefendido(true);
 	}
 	public void guardia()	{
-		
+//	WIP
 	}
 }

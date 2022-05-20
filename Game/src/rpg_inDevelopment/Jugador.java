@@ -22,8 +22,4 @@ public class Jugador {
 	public String toString() {
 		return "Jugador [hp=" + hp + ", arma=" + arma + "]";
 	}
-
-	
-	
-	
 }

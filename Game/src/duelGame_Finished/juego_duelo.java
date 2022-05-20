@@ -3,6 +3,45 @@ package duelGame_Finished;
 import java.util.Scanner;
 
 public class juego_duelo {	
+	public final static Scanner entrada = new Scanner(System.in);
+	public static void intro()	{
+		System.out.println("<|><|><|><|><|><|><|><|>");
+		System.out.println("<|>--BLOOD AND GLORY-<|>");
+		System.out.println("<|><|><|><|><|><|><|><|>");
+		System.out.println();
+		System.out.println("Oponente-> Asi que tu eres el famoso espadachin, ja, no pareces gran cosa");
+		System.out.println("Tu-> Bueno, ya sabes lo que dicen, nunca juzgues un libro por su portada, ¡En guardia canalla!");
+		System.out.println();
+		System.out.println("Juez-> Los dos, a vuestros puestos, ¡QUE COMIENCE EL COMBATE!");			
+	}
+	public static boolean preparacion(duelista tu, duelista oponente)	{
+		tu.stats();
+		oponente.stats();
+		
+		System.out.println("Listo para combatir?");
+		System.out.println("S/N: ");
+		String respuesta = entrada.next().toLowerCase();
+		
+		if (respuesta.equals("s"))	{
+			return true;
+		}
+		else	{
+			return false;
+		}
+}
+	public static void victoria() {
+		System.out.println("============");
+		System.out.println("|¡VICTORIA!|");
+		System.out.println("============");
+		System.out.println("Combate terminado. Felicidades, has ganado el combate y obtenido la gloria.");
+	}
+	public static void derrota()	{
+		System.out.println("===========");
+		System.out.println("|¡DERROTA!|");
+		System.out.println("===========");
+		System.out.println("Combate terminado. Tu cuerpo inerte será un festin para los cuervos.");
+	}
+	
 	public static void main(String[] args) {
 		intro();
 		duelista tu = new duelista("Percival");
@@ -34,45 +73,12 @@ public class juego_duelo {
 		}
 	}
 
-	public final static Scanner entrada = new Scanner(System.in);
-
-	public static void intro()	{
-		System.out.println("<|><|><|><|><|><|><|><|>");
-		System.out.println("<|>--BLOOD AND GLORY-<|>");
-		System.out.println("<|><|><|><|><|><|><|><|>");
-		System.out.println();
-		System.out.println("Oponente-> Asi que tu eres el famoso espadachin, ja, no pareces gran cosa");
-		System.out.println("Tu-> Bueno, ya sabes lo que dicen, nunca juzgues un libro por su portada, ¡En guardia canalla!");
-		System.out.println();
-		System.out.println("Juez-> Los dos, a vuestros puestos, ¡QUE COMIENCE EL COMBATE!");			
-	}
 	
-	public static boolean preparacion(duelista tu, duelista oponente)	{
-			tu.stats();
-			oponente.stats();
-			
-			System.out.println("Listo para combatir?");
-			System.out.println("S/N: ");
-			String respuesta = entrada.next().toLowerCase();
-			
-			if (respuesta.equals("s"))	{
-				return true;
-			}
-			else	{
-				return false;
-			}
-	}
 
-	public static void victoria() {
-		System.out.println("============");
-		System.out.println("|¡VICTORIA!|");
-		System.out.println("============");
-		System.out.println("Combate terminado. Felicidades, has ganado el combate y obtenido la gloria.");
-	}
-	public static void derrota()	{
-		System.out.println("===========");
-		System.out.println("|¡DERROTA!|");
-		System.out.println("===========");
-		System.out.println("Combate terminado. Tu cuerpo inerte será un festin para los cuervos.");
-	}
+	
+	
+	
+
+	
+	
 }

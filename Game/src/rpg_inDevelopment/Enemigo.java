@@ -13,6 +13,4 @@ public class Enemigo extends Jugador{
 			derrotado=true;
 		}
 	}
-	
-	
 }
