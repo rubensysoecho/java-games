@@ -44,8 +44,8 @@ public class juego_duelo {
 	
 	public static void main(String[] args) {
 		intro();
-		duelista tu = new duelista("Percival");
-		duelista oponente = new duelista("Lancelot");
+		duelista tu = new duelista("Jugador 1");
+		duelista oponente = new duelista("Jugador 2");
 		
 		while (preparacion(tu, oponente) == false) {
 			preparacion(tu, oponente);

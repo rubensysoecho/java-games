@@ -17,9 +17,5 @@ public class batalla {
 	}
 	public void setAcabado(boolean acabado) {
 		this.acabado = acabado;
-	}
-	
-	
-	
-	
+	}	
 }
